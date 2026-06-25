@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veleta Adventure | Actividades de Aventura</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --verde:#3E5311;
+    --verde-claro:#557117;
+    --naranja:#D89A2B;
+    --azul:#2D6E88;
+    --negro:#111111;
+    --gris:#f5f5f5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    color:#333;
+    line-height:1.6;
+}
+
+h1,h2,h3{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.logo{
+    font-size:2rem;
+    color:var(--naranja);
+    letter-spacing:4px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:5rem;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:var(--naranja);
+}
+
+.hero p{
+    font-size:1.3rem;
+    margin-bottom:40px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--naranja);
+    color:white;
+    text-decoration:none;
+    padding:15px 40px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* INTRO */
+
+.intro{
+    padding:90px 0;
+    text-align:center;
+}
+
+.intro h2{
+    font-size:3rem;
+    color:var(--verde);
+    margin-bottom:20px;
+}
+
+.intro p{
+    max-width:900px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+/* ACTIVIDADES */
+
+.actividades{
+    background:#f8f8f8;
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:60px;
+    color:var(--verde);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.card h3{
+    color:var(--naranja);
+    margin-bottom:10px;
+}
+
+.card p{
+    margin-bottom:20px;
+}
+
+/* EXPERIENCIA */
+
+.experience{
+    padding:100px 0;
+    background:linear-gradient(135deg,var(--verde),var(--verde-claro));
+    color:white;
+}
+
+.experience-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.experience img{
+    width:100%;
+    border-radius:20px;
+}
+
+.experience h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.experience ul{
+    list-style:none;
+}
+
+.experience li{
+    margin-bottom:15px;
+    font-size:1.1rem;
+}
+
+/* FORMULARIO */
+
+.contacto{
+    padding:100px 0;
+}
+
+.contacto h2{
+    text-align:center;
+    font-size:3rem;
+    color:var(--verde);
+    margin-bottom:50px;
+}
+
+form{
+    max-width:800px;
+    margin:auto;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:1rem;
+}
+
+textarea{
+    min-height:150px;
+}
+
+button{
+    width:100%;
+    padding:18px;
+    background:var(--naranja);
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h3{
+    color:var(--naranja);
+    margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:3rem;
+}
+
+.experience-content{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="logo">
+VELETA ADVENTURE
+</div>
+
+<h1>
+DESCUBRE LA <span>AVENTURA</span>
+</h1>
+
+<p>
+Senderismo, ciclismo, gymkanas y experiencias únicas en plena naturaleza.
+</p>
+
+<a href="#actividades" class="btn">
+Ver actividades
+</a>
+
+</div>
+
+</section>
+
+<section class="intro">
+
+<div class="container">
+
+<h2>Rumbo a la aventura</h2>
+
+<p>
+En Veleta Adventure diseñamos experiencias para todos los públicos. Nuestro objetivo es que descubras paisajes increíbles, superes retos y disfrutes de la naturaleza de una forma diferente.
+</p>
+
+</div>
+
+</section>
+
+<section class="actividades" id="actividades">
+
+<div class="container">
+
+<h2 class="section-title">
+Nuestras Actividades
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Senderismo</h3>
+<p>Rutas adaptadas para familias, grupos y amantes de la montaña.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Ciclismo</h3>
+<p>Recorre caminos y senderos descubriendo entornos espectaculares.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Gymkanas</h3>
+<p>Retos, orientación, misterio y diversión para todas las edades.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Packs Multiaventura</h3>
+<p>Combina varias actividades en una jornada inolvidable.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="experience">
+
+<div class="container">
+
+<div class="experience-content">
+
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80">
+
+<div>
+
+<h2>Veleta Experience</h2>
+
+<ul>
+<li>✓ Experiencias exclusivas</li>
+<li>✓ Guías especializados</li>
+<li>✓ Actividades para grupos</li>
+<li>✓ Entornos naturales únicos</li>
+<li>✓ Aventuras personalizadas</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contacto">
+
+<div class="container">
+
+<h2>Solicita Información</h2>
+
+<form>
+
+<div class="form-group">
+<input type="text" placeholder="Nombre">
+</div>
+
+<div class="form-group">
+<input type="email" placeholder="Correo electrónico">
+</div>
+
+<div class="form-group">
+<select>
+<option>Actividad de interés</option>
+<option>Senderismo</option>
+<option>Ciclismo</option>
+<option>Gymkanas</option>
+<option>Multiaventura</option>
+<option>Veleta Experience</option>
+</select>
+</div>
+
+<div class="form-group">
+<textarea placeholder="Cuéntanos qué experiencia buscas"></textarea>
+</div>
+
+<button type="submit">
+Enviar solicitud
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>VELETA ADVENTURE</h3>
+
+<p>
+Aventura, naturaleza y experiencias inolvidables.
+</p>
+
+<p>
+📧 info@veletaadventure.com | 📱 +34 600 000 000
+</p>
+
+</footer>
+
+</body>
+</html>

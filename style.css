@@ -1,0 +1,312 @@
+:root{
+    --verde:#3E5311;
+    --verde-claro:#557117;
+    --naranja:#D89A2B;
+    --azul:#2D6E88;
+    --negro:#111111;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    width:100%;
+}
+
+body{
+    width:100%;
+    overflow-x:hidden;
+    font-family:'Montserrat',sans-serif;
+    color:#333;
+    background:white;
+}
+
+h1,h2,h3{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+}
+
+.container{
+    width:100%;
+    padding-left:6%;
+    padding-right:6%;
+}
+
+/* HERO */
+
+.hero{
+    width:100vw;
+    min-height:100vh;
+    background:url("img/hero.jpg");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:white;
+    width:100%;
+    max-width:1400px;
+    padding:0 20px;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:20px;
+    letter-spacing:3px;
+}
+
+.logo span{
+    color:var(--naranja);
+}
+
+.hero h1{
+    font-size:clamp(3rem,8vw,7rem);
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--naranja);
+}
+
+.hero p{
+    font-size:clamp(1rem,2vw,1.4rem);
+    margin-bottom:40px;
+}
+
+.btn{
+    display:inline-block;
+    padding:18px 45px;
+    background:var(--naranja);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* SECCIONES */
+
+.intro,
+.actividades,
+.experience,
+.contacto{
+    width:100%;
+}
+
+.intro{
+    padding:120px 0;
+    text-align:center;
+}
+
+.intro h2{
+    color:var(--verde);
+    font-size:clamp(2.5rem,5vw,4rem);
+    margin-bottom:20px;
+}
+
+.intro p{
+    max-width:1200px;
+    margin:auto;
+    font-size:1.15rem;
+}
+
+.actividades{
+    padding:120px 0;
+    background:#f7f7f7;
+}
+
+.section-title{
+    text-align:center;
+    font-size:clamp(2.5rem,5vw,4rem);
+    margin-bottom:70px;
+    color:var(--verde);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+    width:100%;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:30px;
+}
+
+.card h3{
+    color:var(--naranja);
+    margin-bottom:15px;
+}
+
+.experience{
+    background:linear-gradient(135deg,var(--verde),var(--verde-claro));
+    color:white;
+    padding:120px 0;
+}
+
+.experience-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.experience img{
+    width:100%;
+    height:600px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.experience h2{
+    font-size:clamp(2.5rem,5vw,4rem);
+    margin-bottom:20px;
+}
+
+.experience li{
+    margin-bottom:15px;
+    font-size:1.1rem;
+}
+
+.contacto{
+    padding:120px 0;
+}
+
+.contacto h2{
+    text-align:center;
+    color:var(--verde);
+    font-size:clamp(2.5rem,5vw,4rem);
+    margin-bottom:50px;
+}
+
+form{
+    width:100%;
+    max-width:1000px;
+    margin:auto;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:18px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:1rem;
+}
+
+textarea{
+    min-height:200px;
+}
+
+button{
+    width:100%;
+    padding:20px;
+    border:none;
+    background:var(--naranja);
+    color:white;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+}
+
+footer{
+    background:var(--negro);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+footer h3{
+    color:var(--naranja);
+    margin-bottom:15px;
+}
+
+/* TABLETS */
+
+@media(max-width:992px){
+
+    .experience-grid{
+        grid-template-columns:1fr;
+    }
+
+    .experience img{
+        height:450px;
+    }
+}
+
+/* MÓVILES */
+
+@media(max-width:768px){
+
+    .container{
+        padding-left:25px;
+        padding-right:25px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .experience img{
+        height:300px;
+    }
+}
+
+/* PANTALLAS MUY GRANDES */
+
+@media(min-width:1800px){
+
+    .container{
+        padding-left:10%;
+        padding-right:10%;
+    }
+
+    .hero-content{
+        max-width:1800px;
+    }
+}
