@@ -2612,5 +2612,19 @@
         console.log('🏔️ Veleta Adventure - Web Premium Cargada Correctamente');
         console.log('Todas las animaciones y funcionalidades están activas.');
     </script>
+
+---
+---
+/* Esto importa el tema original de GitHub Pages */
+@import "{{ site.theme }}";
+
+/* Sobrescribe el ancho máximo de las páginas para que ocupen todo el viewport */
+.container-lg, .container-xl, .container {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
 </body>
 </html>
